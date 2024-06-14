@@ -85,6 +85,19 @@ public:
 			preorder(ptr->rightchild); // right
 		}
 	}
+	void postorder(Node* ptr) // function to perform postorder traversal
+	{
+		if (ROOT == NULL) {
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL) {
+			postorder(ptr->leftchild); // left
+			postorder(ptr->rightchild); // right
+			cout << ptr->info << " "; // root
+		}
+	}
+};
 
 
 
